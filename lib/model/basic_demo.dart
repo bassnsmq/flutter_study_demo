@@ -61,7 +61,7 @@ class BasicDemo extends StatelessWidget{
       ),
       //行容器
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,  //控制主轴
         children: <Widget>[
           Container(
             child: Icon(Icons.pool,size: 32.0,color: Colors.white,),//图标

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'model/drawer_demo.dart';
 import 'model/bottom_navigation_demo.dart';
+import 'model/LayoutDemo.dart';
 import 'model/basic_demo.dart';
+import 'model/ViewDemo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -28,7 +30,7 @@ class Home extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -62,6 +64,7 @@ class Home extends StatelessWidget{
                 Tab (icon: Icon(Icons.local_florist),),
                 Tab(icon: Icon(Icons.change_history),),
                 Tab(icon:Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.view_quilt)),
               ]),
         ),
         //选择导航图标的界面
@@ -69,8 +72,10 @@ class Home extends StatelessWidget{
             children: <Widget>[
               Icon(Icons.local_florist,size: 128.0,color:Colors.black12 ),
               BasicDemo(),
+              LayoutDemo(),
+              ViewDemo(),
               //Icon(Icons.change_history,size: 128.0,color: Colors.black12,),
-              Icon(Icons.directions_bike,size: 128.0,color:Colors.black12,),
+              //Icon(Icons.directions_bike,size: 128.0,color:Colors.black12,),
             ]),
 //        drawer: Container(
 //          color: Colors.white,
