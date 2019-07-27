@@ -4,6 +4,7 @@ import 'model/bottom_navigation_demo.dart';
 import 'model/LayoutDemo.dart';
 import 'model/basic_demo.dart';
 import 'model/ViewDemo.dart';
+import 'model/sliver_demo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      //home: Home(),
+      home: SliverDemo(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,//顶部工具栏颜色
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),//水波纹
