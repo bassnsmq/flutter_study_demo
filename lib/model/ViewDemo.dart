@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_study/model/Post.dart';
 class ViewDemo extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class ViewDemo extends StatelessWidget{
 class GridViewBuilderDemo extends StatelessWidget{
   Widget _gridItemBuilder(BuildContext context,int index){
     return Container(
-      child: Image(image: null,//post[index].url
-      fit: BoxFit.cover,),
+      child: Image.network(posts[index].imageUrl,//post[index].url
+      fit: BoxFit.cover),
     );
   }
   @override
@@ -109,7 +109,7 @@ class PageViewBuilderDemo extends StatelessWidget {
         children: <Widget>[
           SizedBox.expand(
             child: Image.network(
-              'http://b-ssl.duitang.com/uploads/item/201502/10/20150210223250_5dJeC.jpeg',
+              posts[index].imageUrl,
               fit: BoxFit.cover,),//post[index].url
           ),
           Positioned(
@@ -119,11 +119,11 @@ class PageViewBuilderDemo extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  '11111',//post[index].title
+                  posts[index].title,//post[index].title
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                    '22222' //post[index].author
+                    posts[index].author, //post[index].author
                 )
               ],
             ),

@@ -3,8 +3,9 @@ import 'model/drawer_demo.dart';
 import 'model/bottom_navigation_demo.dart';
 import 'model/LayoutDemo.dart';
 import 'model/basic_demo.dart';
-import 'model/ViewDemo.dart';
+import 'model/listview_demo.dart';
 import 'model/sliver_demo.dart';
+import 'model/navigator_demo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -13,8 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: Home(),
-      home: SliverDemo(),
+      //home: NavigatorDemo(),
+      //初始路由
+      //initialRoute: '/',
+//      routes: {
+//        '/': (context) => NavigatorDemo(),
+//        '/about': (context) => Page(title: 'About'),
+//      },
+      home: Home(),
+      //home: SliverDemo(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,//顶部工具栏颜色
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),//水波纹
@@ -72,10 +80,12 @@ class Home extends StatelessWidget{
         //选择导航图标的界面
         body: TabBarView(
             children: <Widget>[
-              Icon(Icons.local_florist,size: 128.0,color:Colors.black12 ),
+              ListViewDemo(),
+             // Icon(Icons.local_florist,size: 128.0,color:Colors.black12 ),
               BasicDemo(),
               LayoutDemo(),
-              ViewDemo(),
+              //ViewDemo(),
+              SliverDemo(),
               //Icon(Icons.change_history,size: 128.0,color: Colors.black12,),
               //Icon(Icons.directions_bike,size: 128.0,color:Colors.black12,),
             ]),
